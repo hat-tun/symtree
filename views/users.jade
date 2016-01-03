@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p This is #{title}
+
+mixin loadJQuery( version )
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/#{ version }/jquery.min.js")
+  script(src="gShake.js")
+
++loadJQuery('2.0.3')
+
+- $(document).ready(function() {
+    $(this).gShake(function() {
+    alert("Shake!!")
+    });
+- });
