@@ -1,15 +1,11 @@
 extends layout
 
-mixin loadJQuery( version )
-  script(src="https://ajax.googleapis.com/ajax/libs/jquery/#{ version }/jquery.min.js")
-  script(src="gShake.js")
-
 block content
   h1= title
   p This is #{title}
   p Please shake it!
-  //+loadJQuery('2.0.3')
-  +loadJQuery('1.6.1')
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js")
+  script(src="gShake.js")
   script(type="text/javascript").
    $(document).ready(function() {
      $(this).gShake(function() {
