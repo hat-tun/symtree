@@ -8,6 +8,14 @@ block content
   form(method="POST", target="./", id="form1")
              input(type="hidden", name="sum" value="add", id="sum")
 
+  div#visual
+    canvas#canvas-counter(
+       width=500
+       height=500
+    )
+    script(type='text/javascript', src='javascripts/drawCanvas.js')
+    
+
   script(type="text/javascript").
    $(document).ready(function() {
      var count=0;
