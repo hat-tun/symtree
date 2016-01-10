@@ -4,9 +4,12 @@ block content
   h1= title
   p This is #{title}
   p Please shake it!
+  div#counter
   script(type="text/javascript").
    $(document).ready(function() {
+     var count=0;
      $(this).gShake(function() {
-      alert("Shake!!")
+      count++;
+      $('#counter').text("Count:"+count);
      });
    });
