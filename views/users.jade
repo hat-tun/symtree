@@ -5,11 +5,16 @@ block content
   p This is #{title}
   p Please shake it!
   div#counter
+  form(method="POST", target="./", id="form1")
+             input(type="hidden", name="sum" value="add", id="sum")
+
   script(type="text/javascript").
    $(document).ready(function() {
      var count=0;
      $(this).gShake(function() {
       count++;
       $('#counter').text("Count:"+count);
+      $('#sum').val(count);
+      $('#form1').submit();
      });
    });
