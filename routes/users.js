@@ -7,7 +7,8 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-    console.log(req.body);
+    total_counter++;
+    console.log(req.body, total_counter);
 });
 
 module.exports = router;
