@@ -6,7 +6,7 @@ block content
   p Please shake it!
   div#counter Count:0
   form(method="POST", target="./", id="form1")
-             input(type="hidden", name="sum" value="add", id="sum")
+      input(type="hidden", name="sum" value=0, id="sum")
 
   div#visual
     canvas#canvas-counter(
@@ -14,7 +14,9 @@ block content
        height=500
     )
     script(type='text/javascript', src='javascripts/drawCanvas.js')
-    
+
+  script(src="/javascripts/gShake.js",type="text/javascript")
+
   script(type="text/javascript").
    $(document).ready(function() {
      var count=0;
@@ -26,3 +28,4 @@ block content
       $('#form1').submit();
      });
    });
+
