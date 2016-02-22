@@ -17,7 +17,7 @@ block content
            data: ''
         },
         function(data){
-           if (data != undefined){
+           if (typeof data != "undefined"){
               $('#counter').html($(data).find('#counter').text())
            }
         });
