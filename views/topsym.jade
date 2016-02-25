@@ -11,8 +11,8 @@ block content
      script(src="/javascripts/jquery.periodicalupdater.js",type="text/javascript")
      script(type="text/javascript").
       $(document).ready(function() {
-        $.PeriodicalUpdater('./topsym',{
-           minTimeout: 3000,
+        $.PeriodicalUpdater('http://52.11.50.193:3000/topsym',{
+           minTimeout: 1000,
            method: 'get',
            data: ''
         },
