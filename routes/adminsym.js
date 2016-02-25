@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('adminSym', { total: total_counter });
+  res.render('adminsym', { total: total_counter });
 });
 
 router.post('/', function(req, res, next) {
