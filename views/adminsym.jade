@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p This is AdminPage
+  div#counter TotalCount:#{total}
+
+  form(method="POST", target="./", id="form2")
+      input(type="hidden", name="totalReset" value=0, id="totalReset")
+      input(type="submit", value="ResetTotalCounter")
+
